@@ -32,8 +32,8 @@ This project is a **Credit Card Fraud Detection** application built using **Reac
 
 ## Team Members
 
-- **Member 1:** [Your Name]
-- **Member 2:** [Team Member's Name]
+- **Member 1:** [Aniket Korwar](https://www.linkedin.com/in/aniket-korwar-064550203/)
+- **Member 2:** [Ninad Laximish Dixit](https://www.linkedin.com/in/ninaad-dixit-860301252/)
 
 ## Setup Instructions
 
