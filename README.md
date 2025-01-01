@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Credit Card Fraud Detection
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **Credit Card Fraud Detection** application built using **React** for the frontend and **Flask** for the backend. The app predicts whether a credit card transaction is fraudulent based on a set of features using multiple machine learning models (Logistic Regression, Random Forest, and Gradient Boosting).
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Frontend (React):**
+  - Form to input transaction details (Time, Amount, and 28 features).
+  - Displays the fraud prediction result.
+  - CORS handling using a proxy server to make requests to the backend.
 
-### `npm start`
+- **Backend (Flask):**
+  - Handles prediction requests from the frontend.
+  - Implements multiple models to make predictions on transactions.
+  - Scales the data and applies PCA before making predictions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:**
+  - React.js
+  - Tailwind CSS (for styling)
+  
+- **Backend:**
+  - Python
+  - Flask
+  - Scikit-learn (for ML models)
 
-### `npm test`
+- **Deployment:**
+  - Frontend: [Vercel](https://fraud-guard-ai-4vv3-9timkikh0-anikets-projects-464957ff.vercel.app/)
+  - Backend: [Render](https://fraud-gaurd-api.onrender.com)
+  - CORS: [CORS Anywhere](https://cors-anywhere.herokuapp.com/corsdemo)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Team Members
 
-### `npm run build`
+- **Member 1:** [Your Name]
+- **Member 2:** [Team Member's Name]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js and npm installed on your machine
+- Python and pip installed (for the backend)
+  
+### Frontend (React) Setup
 
-### `npm run eject`
+1. Clone this repository.
+2. Navigate to the `frontend` folder (or wherever your React project is).
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm start
+    ```
+5. Open the app in your browser at `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Backend (Flask) Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Navigate to the `backend` folder (or wherever your Flask app is).
+2. Create a virtual environment (optional but recommended):
+    ```bash
+    python -m venv venv
+    ```
+3. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. Start the Flask server:
+    ```bash
+    python app.py
+    ```
+5. The Flask app will be running on `http://localhost:5000`.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- The **frontend** is deployed on [Vercel](https://fraud-guard-ai-4vv3-9timkikh0-anikets-projects-464957ff.vercel.app/), and the **backend** is deployed on [Render](https://fraud-gaurd-api.onrender.com).
+- The **CORS Anywhere** proxy is available temporarily for making CORS requests during development at [https://cors-anywhere.herokuapp.com/corsdemo](https://cors-anywhere.herokuapp.com/corsdemo).
 
-### `npm run build` fails to minify
+## How to Use
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Open the app at [Frontend URL](https://fraud-guard-ai-4vv3-9timkikh0-anikets-projects-464957ff.vercel.app/).
+2. Input transaction details (Time, Amount, and Features V1 to V28).
+3. Submit the form to see the fraud prediction result.
+4. If you encounter CORS issues during the request, use the CORS proxy by clicking the **"Request CORS"** button at [CORS Anywhere](https://cors-anywhere.herokuapp.com/corsdemo).
+
+### Example
+
+You can use the deployed frontend app to interact with the backend and get fraud predictions. Here’s a brief description of what each part does:
+- **Time**: Time of the transaction (in seconds).
+- **Amount**: The amount of the transaction.
+- **Features (V1 to V28)**: These are numerical features used for fraud detection.
+
+After you submit the form, the prediction will be displayed, indicating whether the transaction is **fraudulent** or **legitimate**.
+
+## Troubleshooting
+
+- **CORS Error**: 
+  - If you face CORS issues while making requests from the frontend to the backend, use the **CORS Anywhere** proxy temporarily by clicking the **"Request CORS"** button at [https://cors-anywhere.herokuapp.com/corsdemo](https://cors-anywhere.herokuapp.com/corsdemo).
+  
+- **Model or Input Errors**: Ensure all required input fields are filled correctly, including the 28 feature values.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
